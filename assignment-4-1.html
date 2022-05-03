@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 4.1</title>
+
+  <style>
+    :root {
+      --primary-color-400: #003566;
+      --primary-color-300: #004F99;
+      --primary-color-200: #1272CC;
+      --primary-color-100: #0084FF;
+      --bg-color-500: #fff;
+      --bg-color-400: #afafaf
+    }
+
+    .dark-theme {
+      --primary-color-400: #168FFF;
+      --primary-color-300: #45A5FF;
+      --primary-color-200: #73BCFF;
+      --primary-color-100: #A2D2FF;
+      --bg-color-500: #111;
+      --bg-color-400: #2a2a2a;
+    }
+
+    body {
+      background-color: var(--bg-color-500);
+    }
+
+    button {
+      background-color: var(--bg-color-400);
+      color: var(--primary-color-400);
+      padding: 0.5em 1em;
+      border: none;
+      cursor: pointer;
+    }
+
+    h1 {
+      color: var(--primary-color-400);
+    }
+
+    label {
+      color: var(--primary-color-300);
+    }
+
+    input {
+      border: none;
+      background-color: var(--bg-color-400);
+    }
+  </style>
+</head>
+
+<body>
+  <button id="theme-color-toggler">Toggle Theme</button>
+  <h1>Mustafa Kapadia</h1>
+  <form action="">
+    <div class="form-container">
+      <label for="name">Enter Name:</label>
+      <input type="text">
+    </div>
+  </form>
+
+  <script>
+    const themeColorToggler = document.getElementById("theme-color-toggler");
+    themeColorToggler.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme");
+    })
+  </script>
+</body>
+
+</html>

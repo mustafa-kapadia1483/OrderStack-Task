@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 4.2</title>
+</head>
+
+<body>
+  <div id="john">
+    <input id="name" type="text">
+    <div class="important"></div>
+    <div class="important"></div>
+    <div class="important"></div>
+  </div>
+
+  <script>
+    const nameInput = document.getElementById("name");
+    const important = document.querySelectorAll("#john > .important");
+    nameInput.addEventListener("focus", (e) => {
+      for (let el of important) el.classList.add("shape")
+      e.stopPropagation();
+    })
+  </script>
+</body>
+
+</html>
